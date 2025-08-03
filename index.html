@@ -1,0 +1,217 @@
+
+<!--
+  Balloon of Angel
+  The Angel’s Balloon
+  Charitable Organization - Webpage Section
+  (HTML + CSS only, no JS)
+-->
+<style>
+  .angel-balloon-hero {
+    background: linear-gradient(180deg, #f9e7ff 0%, #ffe7e7 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    padding-bottom: 60px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .angel-balloon-title {
+    margin-top: 48px;
+    font-size: 2.8rem;
+    color: #e07a5f;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 0 #fff6, 0 4px 12px #e07a5f33;
+    text-align: center;
+  }
+  .angel-balloon-subtitle {
+    font-size: 1.3rem;
+    color: #7f5539;
+    margin-bottom: 18px;
+    text-align: center;
+    font-style: italic;
+  }
+  .angel-balloon-story {
+    max-width: 600px;
+    background: #fff8;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #e07a5f22;
+    padding: 32px 28px 24px 28px;
+    margin: 32px 0 24px 0;
+    color: #3d405b;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .angel-balloon-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 24px 0 0 0;
+  }
+  .angel-balloon-img-card {
+    background: #fff9;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #e07a5f22;
+    padding: 12px 12px 8px 12px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+  .angel-balloon-img-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px #e07a5f33;
+  }
+  .angel-balloon-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f9dcc4;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  .angel-balloon-caption {
+    font-size: 1rem;
+    color: #7f5539;
+    margin-top: 4px;
+    text-align: center;
+  }
+  /* Pure CSS Balloons */
+  .angel-balloons-bg {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    width: 100vw;
+    height: 340px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+  }
+  .angel-balloon {
+    position: absolute;
+    bottom: 0;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .angel-balloon:nth-child(1) { left: 8vw; animation-delay: 0s; }
+  .angel-balloon:nth-child(2) { left: 18vw; animation-delay: 2s; }
+  .angel-balloon:nth-child(3) { left: 28vw; animation-delay: 1s; }
+  .angel-balloon:nth-child(4) { left: 38vw; animation-delay: 3s; }
+  .angel-balloon:nth-child(5) { left: 48vw; animation-delay: 0.5s; }
+  .angel-balloon:nth-child(6) { left: 58vw; animation-delay: 2.5s; }
+  .angel-balloon:nth-child(7) { left: 68vw; animation-delay: 1.5s; }
+  .angel-balloon:nth-child(8) { left: 78vw; animation-delay: 3.5s; }
+  .angel-balloon:nth-child(9) { left: 88vw; animation-delay: 1.2s; }
+  @keyframes floatUp {
+    0% { transform: translateY(120px) scale(1); opacity: 0.7;}
+    10% { opacity: 1;}
+    90% { opacity: 1;}
+    100% { transform: translateY(-320px) scale(1.05); opacity: 0.2;}
+  }
+  @media (max-width: 700px) {
+    .angel-balloon-story { padding: 18px 8px; }
+    .angel-balloon-img-card { width: 95vw; }
+    .angel-balloon-img { width: 120px; height: 120px; }
+    .angel-balloons-bg { height: 180px; }
+  }
+</style>
+<div class="angel-balloon-hero">
+  <div class="angel-balloons-bg" aria-hidden="true">
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#ffb4d9"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#ffe066"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#a3cef1"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#b5ead7"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#f9dcc4"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#e07a5f"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#f7b267"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#f4845f"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+    <svg class="angel-balloon" width="60" height="110" viewBox="0 0 60 110">
+      <ellipse cx="30" cy="40" rx="24" ry="34" fill="#6a89cc"/>
+      <ellipse cx="22" cy="28" rx="7" ry="12" fill="#fff8" />
+      <rect x="27" y="74" width="6" height="12" rx="3" fill="#b08968"/>
+      <path d="M30 86 Q32 98 24 110" stroke="#b08968" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <div class="angel-balloon-title">Angel’s Balloon</div>
+  <div class="angel-balloon-subtitle">
+    Spreading joy, one balloon at a time — for over ten years.
+    </div>
+    
+  <div class="angel-balloon-story">
+    <p>
+        Every day, in the heart of the park, a gentle grandpa arrives with a bag full of colorful balloons. For over ten years, he has greeted children with a warm smile, offering them free balloons and a moment of pure joy. His hands, though wrinkled with age, move with the grace of love as he blows up each balloon, tying them with care and handing them to eager little hands.
+      </p>
+      <p>
+        According to nearby residents, this grandpa has been coming here for over a decade—never missing a day—just to hand out balloons to children for free.
+      </p>
+      <p>
+        Rain or shine, his presence is a beacon of kindness. The laughter of children, the sparkle in their eyes, and the chorus of thank-yous are his daily reward. His unwavering compassion has touched countless families, reminding us all of the power of simple, selfless acts.
+      </p>
+      <p>
+        <b>Balloon of Angel</b> is a charitable organization inspired by his story. We celebrate his legacy and invite you to join us in spreading joy, one balloon at a time.
+      </p>      
+  </div>
+  <div class="angel-balloon-gallery">
+    <div class="angel-balloon-img-card">
+      <img class="angel-balloon-img" src="gradpagreet.jpg" alt="Grandpa giving balloon">
+      <div class="angel-balloon-caption">Grandpa gently hands a balloon to a smiling child.</div>
+    </div>
+    <div class="angel-balloon-img-card">
+      <img class="angel-balloon-img" src="gradpagreet.jpg" alt="Children with balloons">
+      <div class="angel-balloon-caption">Children gather, their faces lit up with excitement and wonder.</div>
+    </div>
+    <div class="angel-balloon-img-card">
+      <img class="angel-balloon-img" src="gradpagreet.jpg" alt="Grandpa blowing balloon">
+      <div class="angel-balloon-caption">The grandpa, surrounded by laughter, blows up another balloon with care.</div>
+    </div>
+  </div>
+</div>
